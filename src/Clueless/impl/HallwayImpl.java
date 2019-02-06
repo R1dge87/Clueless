@@ -3,7 +3,7 @@
 package Clueless.impl;
 
 import Clueless.Hallway;
-import Clueless.NullPackage;
+import Clueless.MainPackage;
 import Clueless.Player;
 import Clueless.Room;
 
@@ -80,7 +80,7 @@ public class HallwayImpl extends MinimalEObjectImpl.Container implements Hallway
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return NullPackage.Literals.HALLWAY;
+		return MainPackage.Literals.HALLWAY;
 	}
 
 	/**
@@ -88,9 +88,10 @@ public class HallwayImpl extends MinimalEObjectImpl.Container implements Hallway
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Boolean> getHasPerson() {
 		if (hasPerson == null) {
-			hasPerson = new EDataTypeUniqueEList<Boolean>(Boolean.class, this, NullPackage.HALLWAY__HAS_PERSON);
+			hasPerson = new EDataTypeUniqueEList<Boolean>(Boolean.class, this, MainPackage.HALLWAY__HAS_PERSON);
 		}
 		return hasPerson;
 	}
@@ -100,9 +101,10 @@ public class HallwayImpl extends MinimalEObjectImpl.Container implements Hallway
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Player> getPlayerList() {
 		if (playerList == null) {
-			playerList = new EObjectResolvingEList<Player>(Player.class, this, NullPackage.HALLWAY__PLAYER_LIST);
+			playerList = new EObjectResolvingEList<Player>(Player.class, this, MainPackage.HALLWAY__PLAYER_LIST);
 		}
 		return playerList;
 	}
@@ -112,9 +114,10 @@ public class HallwayImpl extends MinimalEObjectImpl.Container implements Hallway
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Room> getAdjacentRoomList() {
 		if (adjacentRoomList == null) {
-			adjacentRoomList = new EObjectResolvingEList<Room>(Room.class, this, NullPackage.HALLWAY__ADJACENT_ROOM_LIST);
+			adjacentRoomList = new EObjectResolvingEList<Room>(Room.class, this, MainPackage.HALLWAY__ADJACENT_ROOM_LIST);
 		}
 		return adjacentRoomList;
 	}
@@ -127,11 +130,11 @@ public class HallwayImpl extends MinimalEObjectImpl.Container implements Hallway
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case NullPackage.HALLWAY__HAS_PERSON:
+			case MainPackage.HALLWAY__HAS_PERSON:
 				return getHasPerson();
-			case NullPackage.HALLWAY__PLAYER_LIST:
+			case MainPackage.HALLWAY__PLAYER_LIST:
 				return getPlayerList();
-			case NullPackage.HALLWAY__ADJACENT_ROOM_LIST:
+			case MainPackage.HALLWAY__ADJACENT_ROOM_LIST:
 				return getAdjacentRoomList();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -146,15 +149,15 @@ public class HallwayImpl extends MinimalEObjectImpl.Container implements Hallway
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case NullPackage.HALLWAY__HAS_PERSON:
+			case MainPackage.HALLWAY__HAS_PERSON:
 				getHasPerson().clear();
 				getHasPerson().addAll((Collection<? extends Boolean>)newValue);
 				return;
-			case NullPackage.HALLWAY__PLAYER_LIST:
+			case MainPackage.HALLWAY__PLAYER_LIST:
 				getPlayerList().clear();
 				getPlayerList().addAll((Collection<? extends Player>)newValue);
 				return;
-			case NullPackage.HALLWAY__ADJACENT_ROOM_LIST:
+			case MainPackage.HALLWAY__ADJACENT_ROOM_LIST:
 				getAdjacentRoomList().clear();
 				getAdjacentRoomList().addAll((Collection<? extends Room>)newValue);
 				return;
@@ -170,13 +173,13 @@ public class HallwayImpl extends MinimalEObjectImpl.Container implements Hallway
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case NullPackage.HALLWAY__HAS_PERSON:
+			case MainPackage.HALLWAY__HAS_PERSON:
 				getHasPerson().clear();
 				return;
-			case NullPackage.HALLWAY__PLAYER_LIST:
+			case MainPackage.HALLWAY__PLAYER_LIST:
 				getPlayerList().clear();
 				return;
-			case NullPackage.HALLWAY__ADJACENT_ROOM_LIST:
+			case MainPackage.HALLWAY__ADJACENT_ROOM_LIST:
 				getAdjacentRoomList().clear();
 				return;
 		}
@@ -191,11 +194,11 @@ public class HallwayImpl extends MinimalEObjectImpl.Container implements Hallway
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case NullPackage.HALLWAY__HAS_PERSON:
+			case MainPackage.HALLWAY__HAS_PERSON:
 				return hasPerson != null && !hasPerson.isEmpty();
-			case NullPackage.HALLWAY__PLAYER_LIST:
+			case MainPackage.HALLWAY__PLAYER_LIST:
 				return playerList != null && !playerList.isEmpty();
-			case NullPackage.HALLWAY__ADJACENT_ROOM_LIST:
+			case MainPackage.HALLWAY__ADJACENT_ROOM_LIST:
 				return adjacentRoomList != null && !adjacentRoomList.isEmpty();
 		}
 		return super.eIsSet(featureID);
@@ -210,7 +213,7 @@ public class HallwayImpl extends MinimalEObjectImpl.Container implements Hallway
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (hasPerson: ");
 		result.append(hasPerson);
 		result.append(')');

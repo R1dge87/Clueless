@@ -20,7 +20,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link Clueless.Hallway#getAdjacentRoomList <em>Adjacent Room List</em>}</li>
  * </ul>
  *
- * @see Clueless.NullPackage#getHallway()
+ * @see Clueless.MainPackage#getHallway()
  * @model
  * @generated
  */
@@ -35,7 +35,7 @@ public interface Hallway extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Has Person</em>' attribute list.
-	 * @see Clueless.NullPackage#getHallway_HasPerson()
+	 * @see Clueless.MainPackage#getHallway_HasPerson()
 	 * @model
 	 * @generated
 	 */
@@ -51,7 +51,7 @@ public interface Hallway extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Player List</em>' reference list.
-	 * @see Clueless.NullPackage#getHallway_PlayerList()
+	 * @see Clueless.MainPackage#getHallway_PlayerList()
 	 * @model
 	 * @generated
 	 */
@@ -67,7 +67,7 @@ public interface Hallway extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Adjacent Room List</em>' reference list.
-	 * @see Clueless.NullPackage#getHallway_AdjacentRoomList()
+	 * @see Clueless.MainPackage#getHallway_AdjacentRoomList()
 	 * @model
 	 * @generated
 	 */

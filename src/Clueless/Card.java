@@ -18,7 +18,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link Clueless.Card#getRoom <em>Room</em>}</li>
  * </ul>
  *
- * @see Clueless.NullPackage#getCard()
+ * @see Clueless.MainPackage#getCard()
  * @model
  * @generated
  */
@@ -33,7 +33,7 @@ public interface Card extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Weapon</em>' attribute.
 	 * @see #setWeapon(String)
-	 * @see Clueless.NullPackage#getCard_Weapon()
+	 * @see Clueless.MainPackage#getCard_Weapon()
 	 * @model
 	 * @generated
 	 */
@@ -59,7 +59,7 @@ public interface Card extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Person</em>' attribute.
 	 * @see #setPerson(String)
-	 * @see Clueless.NullPackage#getCard_Person()
+	 * @see Clueless.MainPackage#getCard_Person()
 	 * @model
 	 * @generated
 	 */
@@ -85,7 +85,7 @@ public interface Card extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Room</em>' attribute.
 	 * @see #setRoom(String)
-	 * @see Clueless.NullPackage#getCard_Room()
+	 * @see Clueless.MainPackage#getCard_Room()
 	 * @model
 	 * @generated
 	 */

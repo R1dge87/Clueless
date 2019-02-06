@@ -3,7 +3,7 @@
 package Clueless.impl;
 
 import Clueless.Hallway;
-import Clueless.NullPackage;
+import Clueless.MainPackage;
 import Clueless.Player;
 import Clueless.Room;
 
@@ -104,7 +104,7 @@ public class RoomImpl extends MinimalEObjectImpl.Container implements Room {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return NullPackage.Literals.ROOM;
+		return MainPackage.Literals.ROOM;
 	}
 
 	/**
@@ -112,6 +112,7 @@ public class RoomImpl extends MinimalEObjectImpl.Container implements Room {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getName() {
 		return name;
 	}
@@ -121,11 +122,12 @@ public class RoomImpl extends MinimalEObjectImpl.Container implements Room {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setName(String newName) {
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, NullPackage.ROOM__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, MainPackage.ROOM__NAME, oldName, name));
 	}
 
 	/**
@@ -133,13 +135,14 @@ public class RoomImpl extends MinimalEObjectImpl.Container implements Room {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Room getTrapDoorRoom() {
 		if (trapDoorRoom != null && trapDoorRoom.eIsProxy()) {
 			InternalEObject oldTrapDoorRoom = (InternalEObject)trapDoorRoom;
 			trapDoorRoom = (Room)eResolveProxy(oldTrapDoorRoom);
 			if (trapDoorRoom != oldTrapDoorRoom) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, NullPackage.ROOM__TRAP_DOOR_ROOM, oldTrapDoorRoom, trapDoorRoom));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, MainPackage.ROOM__TRAP_DOOR_ROOM, oldTrapDoorRoom, trapDoorRoom));
 			}
 		}
 		return trapDoorRoom;
@@ -159,11 +162,12 @@ public class RoomImpl extends MinimalEObjectImpl.Container implements Room {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTrapDoorRoom(Room newTrapDoorRoom) {
 		Room oldTrapDoorRoom = trapDoorRoom;
 		trapDoorRoom = newTrapDoorRoom;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, NullPackage.ROOM__TRAP_DOOR_ROOM, oldTrapDoorRoom, trapDoorRoom));
+			eNotify(new ENotificationImpl(this, Notification.SET, MainPackage.ROOM__TRAP_DOOR_ROOM, oldTrapDoorRoom, trapDoorRoom));
 	}
 
 	/**
@@ -171,9 +175,10 @@ public class RoomImpl extends MinimalEObjectImpl.Container implements Room {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Player> getPlayerList() {
 		if (playerList == null) {
-			playerList = new EObjectResolvingEList<Player>(Player.class, this, NullPackage.ROOM__PLAYER_LIST);
+			playerList = new EObjectResolvingEList<Player>(Player.class, this, MainPackage.ROOM__PLAYER_LIST);
 		}
 		return playerList;
 	}
@@ -183,9 +188,10 @@ public class RoomImpl extends MinimalEObjectImpl.Container implements Room {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Hallway> getHallwayList() {
 		if (hallwayList == null) {
-			hallwayList = new EObjectResolvingEList<Hallway>(Hallway.class, this, NullPackage.ROOM__HALLWAY_LIST);
+			hallwayList = new EObjectResolvingEList<Hallway>(Hallway.class, this, MainPackage.ROOM__HALLWAY_LIST);
 		}
 		return hallwayList;
 	}
@@ -198,14 +204,14 @@ public class RoomImpl extends MinimalEObjectImpl.Container implements Room {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case NullPackage.ROOM__NAME:
+			case MainPackage.ROOM__NAME:
 				return getName();
-			case NullPackage.ROOM__TRAP_DOOR_ROOM:
+			case MainPackage.ROOM__TRAP_DOOR_ROOM:
 				if (resolve) return getTrapDoorRoom();
 				return basicGetTrapDoorRoom();
-			case NullPackage.ROOM__PLAYER_LIST:
+			case MainPackage.ROOM__PLAYER_LIST:
 				return getPlayerList();
-			case NullPackage.ROOM__HALLWAY_LIST:
+			case MainPackage.ROOM__HALLWAY_LIST:
 				return getHallwayList();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -220,17 +226,17 @@ public class RoomImpl extends MinimalEObjectImpl.Container implements Room {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case NullPackage.ROOM__NAME:
+			case MainPackage.ROOM__NAME:
 				setName((String)newValue);
 				return;
-			case NullPackage.ROOM__TRAP_DOOR_ROOM:
+			case MainPackage.ROOM__TRAP_DOOR_ROOM:
 				setTrapDoorRoom((Room)newValue);
 				return;
-			case NullPackage.ROOM__PLAYER_LIST:
+			case MainPackage.ROOM__PLAYER_LIST:
 				getPlayerList().clear();
 				getPlayerList().addAll((Collection<? extends Player>)newValue);
 				return;
-			case NullPackage.ROOM__HALLWAY_LIST:
+			case MainPackage.ROOM__HALLWAY_LIST:
 				getHallwayList().clear();
 				getHallwayList().addAll((Collection<? extends Hallway>)newValue);
 				return;
@@ -246,16 +252,16 @@ public class RoomImpl extends MinimalEObjectImpl.Container implements Room {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case NullPackage.ROOM__NAME:
+			case MainPackage.ROOM__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case NullPackage.ROOM__TRAP_DOOR_ROOM:
+			case MainPackage.ROOM__TRAP_DOOR_ROOM:
 				setTrapDoorRoom((Room)null);
 				return;
-			case NullPackage.ROOM__PLAYER_LIST:
+			case MainPackage.ROOM__PLAYER_LIST:
 				getPlayerList().clear();
 				return;
-			case NullPackage.ROOM__HALLWAY_LIST:
+			case MainPackage.ROOM__HALLWAY_LIST:
 				getHallwayList().clear();
 				return;
 		}
@@ -270,13 +276,13 @@ public class RoomImpl extends MinimalEObjectImpl.Container implements Room {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case NullPackage.ROOM__NAME:
+			case MainPackage.ROOM__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case NullPackage.ROOM__TRAP_DOOR_ROOM:
+			case MainPackage.ROOM__TRAP_DOOR_ROOM:
 				return trapDoorRoom != null;
-			case NullPackage.ROOM__PLAYER_LIST:
+			case MainPackage.ROOM__PLAYER_LIST:
 				return playerList != null && !playerList.isEmpty();
-			case NullPackage.ROOM__HALLWAY_LIST:
+			case MainPackage.ROOM__HALLWAY_LIST:
 				return hallwayList != null && !hallwayList.isEmpty();
 		}
 		return super.eIsSet(featureID);
@@ -291,7 +297,7 @@ public class RoomImpl extends MinimalEObjectImpl.Container implements Room {
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (name: ");
 		result.append(name);
 		result.append(')');

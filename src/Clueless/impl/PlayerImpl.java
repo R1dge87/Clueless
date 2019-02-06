@@ -3,7 +3,7 @@
 package Clueless.impl;
 
 import Clueless.Card;
-import Clueless.NullPackage;
+import Clueless.MainPackage;
 import Clueless.Player;
 
 import java.lang.reflect.InvocationTargetException;
@@ -145,7 +145,7 @@ public class PlayerImpl extends MinimalEObjectImpl.Container implements Player {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return NullPackage.Literals.PLAYER;
+		return MainPackage.Literals.PLAYER;
 	}
 
 	/**
@@ -153,6 +153,7 @@ public class PlayerImpl extends MinimalEObjectImpl.Container implements Player {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getName() {
 		return name;
 	}
@@ -162,11 +163,12 @@ public class PlayerImpl extends MinimalEObjectImpl.Container implements Player {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setName(String newName) {
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, NullPackage.PLAYER__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, MainPackage.PLAYER__NAME, oldName, name));
 	}
 
 	/**
@@ -174,6 +176,7 @@ public class PlayerImpl extends MinimalEObjectImpl.Container implements Player {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getColor() {
 		return color;
 	}
@@ -183,11 +186,12 @@ public class PlayerImpl extends MinimalEObjectImpl.Container implements Player {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setColor(String newColor) {
 		String oldColor = color;
 		color = newColor;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, NullPackage.PLAYER__COLOR, oldColor, color));
+			eNotify(new ENotificationImpl(this, Notification.SET, MainPackage.PLAYER__COLOR, oldColor, color));
 	}
 
 	/**
@@ -195,6 +199,7 @@ public class PlayerImpl extends MinimalEObjectImpl.Container implements Player {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Boolean getTurnToken() {
 		return turnToken;
 	}
@@ -204,11 +209,12 @@ public class PlayerImpl extends MinimalEObjectImpl.Container implements Player {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTurnToken(Boolean newTurnToken) {
 		Boolean oldTurnToken = turnToken;
 		turnToken = newTurnToken;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, NullPackage.PLAYER__TURN_TOKEN, oldTurnToken, turnToken));
+			eNotify(new ENotificationImpl(this, Notification.SET, MainPackage.PLAYER__TURN_TOKEN, oldTurnToken, turnToken));
 	}
 
 	/**
@@ -216,6 +222,7 @@ public class PlayerImpl extends MinimalEObjectImpl.Container implements Player {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getPersonId() {
 		return personId;
 	}
@@ -225,11 +232,12 @@ public class PlayerImpl extends MinimalEObjectImpl.Container implements Player {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPersonId(String newPersonId) {
 		String oldPersonId = personId;
 		personId = newPersonId;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, NullPackage.PLAYER__PERSON_ID, oldPersonId, personId));
+			eNotify(new ENotificationImpl(this, Notification.SET, MainPackage.PLAYER__PERSON_ID, oldPersonId, personId));
 	}
 
 	/**
@@ -237,9 +245,10 @@ public class PlayerImpl extends MinimalEObjectImpl.Container implements Player {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Card> getCardList() {
 		if (cardList == null) {
-			cardList = new EObjectResolvingEList<Card>(Card.class, this, NullPackage.PLAYER__CARD_LIST);
+			cardList = new EObjectResolvingEList<Card>(Card.class, this, MainPackage.PLAYER__CARD_LIST);
 		}
 		return cardList;
 	}
@@ -249,6 +258,7 @@ public class PlayerImpl extends MinimalEObjectImpl.Container implements Player {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void move() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
@@ -260,6 +270,7 @@ public class PlayerImpl extends MinimalEObjectImpl.Container implements Player {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void accuse() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
@@ -271,6 +282,7 @@ public class PlayerImpl extends MinimalEObjectImpl.Container implements Player {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void suggest() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
@@ -285,15 +297,15 @@ public class PlayerImpl extends MinimalEObjectImpl.Container implements Player {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case NullPackage.PLAYER__NAME:
+			case MainPackage.PLAYER__NAME:
 				return getName();
-			case NullPackage.PLAYER__COLOR:
+			case MainPackage.PLAYER__COLOR:
 				return getColor();
-			case NullPackage.PLAYER__TURN_TOKEN:
+			case MainPackage.PLAYER__TURN_TOKEN:
 				return getTurnToken();
-			case NullPackage.PLAYER__PERSON_ID:
+			case MainPackage.PLAYER__PERSON_ID:
 				return getPersonId();
-			case NullPackage.PLAYER__CARD_LIST:
+			case MainPackage.PLAYER__CARD_LIST:
 				return getCardList();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -308,19 +320,19 @@ public class PlayerImpl extends MinimalEObjectImpl.Container implements Player {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case NullPackage.PLAYER__NAME:
+			case MainPackage.PLAYER__NAME:
 				setName((String)newValue);
 				return;
-			case NullPackage.PLAYER__COLOR:
+			case MainPackage.PLAYER__COLOR:
 				setColor((String)newValue);
 				return;
-			case NullPackage.PLAYER__TURN_TOKEN:
+			case MainPackage.PLAYER__TURN_TOKEN:
 				setTurnToken((Boolean)newValue);
 				return;
-			case NullPackage.PLAYER__PERSON_ID:
+			case MainPackage.PLAYER__PERSON_ID:
 				setPersonId((String)newValue);
 				return;
-			case NullPackage.PLAYER__CARD_LIST:
+			case MainPackage.PLAYER__CARD_LIST:
 				getCardList().clear();
 				getCardList().addAll((Collection<? extends Card>)newValue);
 				return;
@@ -336,19 +348,19 @@ public class PlayerImpl extends MinimalEObjectImpl.Container implements Player {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case NullPackage.PLAYER__NAME:
+			case MainPackage.PLAYER__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case NullPackage.PLAYER__COLOR:
+			case MainPackage.PLAYER__COLOR:
 				setColor(COLOR_EDEFAULT);
 				return;
-			case NullPackage.PLAYER__TURN_TOKEN:
+			case MainPackage.PLAYER__TURN_TOKEN:
 				setTurnToken(TURN_TOKEN_EDEFAULT);
 				return;
-			case NullPackage.PLAYER__PERSON_ID:
+			case MainPackage.PLAYER__PERSON_ID:
 				setPersonId(PERSON_ID_EDEFAULT);
 				return;
-			case NullPackage.PLAYER__CARD_LIST:
+			case MainPackage.PLAYER__CARD_LIST:
 				getCardList().clear();
 				return;
 		}
@@ -363,15 +375,15 @@ public class PlayerImpl extends MinimalEObjectImpl.Container implements Player {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case NullPackage.PLAYER__NAME:
+			case MainPackage.PLAYER__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case NullPackage.PLAYER__COLOR:
+			case MainPackage.PLAYER__COLOR:
 				return COLOR_EDEFAULT == null ? color != null : !COLOR_EDEFAULT.equals(color);
-			case NullPackage.PLAYER__TURN_TOKEN:
+			case MainPackage.PLAYER__TURN_TOKEN:
 				return TURN_TOKEN_EDEFAULT == null ? turnToken != null : !TURN_TOKEN_EDEFAULT.equals(turnToken);
-			case NullPackage.PLAYER__PERSON_ID:
+			case MainPackage.PLAYER__PERSON_ID:
 				return PERSON_ID_EDEFAULT == null ? personId != null : !PERSON_ID_EDEFAULT.equals(personId);
-			case NullPackage.PLAYER__CARD_LIST:
+			case MainPackage.PLAYER__CARD_LIST:
 				return cardList != null && !cardList.isEmpty();
 		}
 		return super.eIsSet(featureID);
@@ -385,13 +397,13 @@ public class PlayerImpl extends MinimalEObjectImpl.Container implements Player {
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case NullPackage.PLAYER___MOVE:
+			case MainPackage.PLAYER___MOVE:
 				move();
 				return null;
-			case NullPackage.PLAYER___ACCUSE:
+			case MainPackage.PLAYER___ACCUSE:
 				accuse();
 				return null;
-			case NullPackage.PLAYER___SUGGEST:
+			case MainPackage.PLAYER___SUGGEST:
 				suggest();
 				return null;
 		}
@@ -407,7 +419,7 @@ public class PlayerImpl extends MinimalEObjectImpl.Container implements Player {
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (name: ");
 		result.append(name);
 		result.append(", color: ");

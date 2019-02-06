@@ -3,7 +3,7 @@
 package Clueless.impl;
 
 import Clueless.Card;
-import Clueless.NullPackage;
+import Clueless.MainPackage;
 import Clueless.Solution;
 
 import java.util.Collection;
@@ -56,7 +56,7 @@ public class SolutionImpl extends MinimalEObjectImpl.Container implements Soluti
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return NullPackage.Literals.SOLUTION;
+		return MainPackage.Literals.SOLUTION;
 	}
 
 	/**
@@ -64,9 +64,10 @@ public class SolutionImpl extends MinimalEObjectImpl.Container implements Soluti
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Card> getSolutionCardList() {
 		if (solutionCardList == null) {
-			solutionCardList = new EObjectResolvingEList<Card>(Card.class, this, NullPackage.SOLUTION__SOLUTION_CARD_LIST);
+			solutionCardList = new EObjectResolvingEList<Card>(Card.class, this, MainPackage.SOLUTION__SOLUTION_CARD_LIST);
 		}
 		return solutionCardList;
 	}
@@ -79,7 +80,7 @@ public class SolutionImpl extends MinimalEObjectImpl.Container implements Soluti
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case NullPackage.SOLUTION__SOLUTION_CARD_LIST:
+			case MainPackage.SOLUTION__SOLUTION_CARD_LIST:
 				return getSolutionCardList();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -94,7 +95,7 @@ public class SolutionImpl extends MinimalEObjectImpl.Container implements Soluti
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case NullPackage.SOLUTION__SOLUTION_CARD_LIST:
+			case MainPackage.SOLUTION__SOLUTION_CARD_LIST:
 				getSolutionCardList().clear();
 				getSolutionCardList().addAll((Collection<? extends Card>)newValue);
 				return;
@@ -110,7 +111,7 @@ public class SolutionImpl extends MinimalEObjectImpl.Container implements Soluti
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case NullPackage.SOLUTION__SOLUTION_CARD_LIST:
+			case MainPackage.SOLUTION__SOLUTION_CARD_LIST:
 				getSolutionCardList().clear();
 				return;
 		}
@@ -125,7 +126,7 @@ public class SolutionImpl extends MinimalEObjectImpl.Container implements Soluti
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case NullPackage.SOLUTION__SOLUTION_CARD_LIST:
+			case MainPackage.SOLUTION__SOLUTION_CARD_LIST:
 				return solutionCardList != null && !solutionCardList.isEmpty();
 		}
 		return super.eIsSet(featureID);

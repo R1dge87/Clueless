@@ -21,7 +21,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link Clueless.Room#getHallwayList <em>Hallway List</em>}</li>
  * </ul>
  *
- * @see Clueless.NullPackage#getRoom()
+ * @see Clueless.MainPackage#getRoom()
  * @model
  * @generated
  */
@@ -36,7 +36,7 @@ public interface Room extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
-	 * @see Clueless.NullPackage#getRoom_Name()
+	 * @see Clueless.MainPackage#getRoom_Name()
 	 * @model
 	 * @generated
 	 */
@@ -62,7 +62,7 @@ public interface Room extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Trap Door Room</em>' reference.
 	 * @see #setTrapDoorRoom(Room)
-	 * @see Clueless.NullPackage#getRoom_TrapDoorRoom()
+	 * @see Clueless.MainPackage#getRoom_TrapDoorRoom()
 	 * @model
 	 * @generated
 	 */
@@ -88,7 +88,7 @@ public interface Room extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Player List</em>' reference list.
-	 * @see Clueless.NullPackage#getRoom_PlayerList()
+	 * @see Clueless.MainPackage#getRoom_PlayerList()
 	 * @model
 	 * @generated
 	 */
@@ -104,7 +104,7 @@ public interface Room extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Hallway List</em>' reference list.
-	 * @see Clueless.NullPackage#getRoom_HallwayList()
+	 * @see Clueless.MainPackage#getRoom_HallwayList()
 	 * @model
 	 * @generated
 	 */

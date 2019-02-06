@@ -3,8 +3,7 @@
 package Clueless.impl;
 
 import Clueless.Card;
-import Clueless.NullPackage;
-
+import Clueless.MainPackage;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
@@ -104,7 +103,7 @@ public class CardImpl extends MinimalEObjectImpl.Container implements Card {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return NullPackage.Literals.CARD;
+		return MainPackage.Literals.CARD;
 	}
 
 	/**
@@ -112,6 +111,7 @@ public class CardImpl extends MinimalEObjectImpl.Container implements Card {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getWeapon() {
 		return weapon;
 	}
@@ -121,11 +121,12 @@ public class CardImpl extends MinimalEObjectImpl.Container implements Card {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setWeapon(String newWeapon) {
 		String oldWeapon = weapon;
 		weapon = newWeapon;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, NullPackage.CARD__WEAPON, oldWeapon, weapon));
+			eNotify(new ENotificationImpl(this, Notification.SET, MainPackage.CARD__WEAPON, oldWeapon, weapon));
 	}
 
 	/**
@@ -133,6 +134,7 @@ public class CardImpl extends MinimalEObjectImpl.Container implements Card {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getPerson() {
 		return person;
 	}
@@ -142,11 +144,12 @@ public class CardImpl extends MinimalEObjectImpl.Container implements Card {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPerson(String newPerson) {
 		String oldPerson = person;
 		person = newPerson;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, NullPackage.CARD__PERSON, oldPerson, person));
+			eNotify(new ENotificationImpl(this, Notification.SET, MainPackage.CARD__PERSON, oldPerson, person));
 	}
 
 	/**
@@ -154,6 +157,7 @@ public class CardImpl extends MinimalEObjectImpl.Container implements Card {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getRoom() {
 		return room;
 	}
@@ -163,11 +167,12 @@ public class CardImpl extends MinimalEObjectImpl.Container implements Card {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setRoom(String newRoom) {
 		String oldRoom = room;
 		room = newRoom;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, NullPackage.CARD__ROOM, oldRoom, room));
+			eNotify(new ENotificationImpl(this, Notification.SET, MainPackage.CARD__ROOM, oldRoom, room));
 	}
 
 	/**
@@ -178,11 +183,11 @@ public class CardImpl extends MinimalEObjectImpl.Container implements Card {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case NullPackage.CARD__WEAPON:
+			case MainPackage.CARD__WEAPON:
 				return getWeapon();
-			case NullPackage.CARD__PERSON:
+			case MainPackage.CARD__PERSON:
 				return getPerson();
-			case NullPackage.CARD__ROOM:
+			case MainPackage.CARD__ROOM:
 				return getRoom();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -196,13 +201,13 @@ public class CardImpl extends MinimalEObjectImpl.Container implements Card {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case NullPackage.CARD__WEAPON:
+			case MainPackage.CARD__WEAPON:
 				setWeapon((String)newValue);
 				return;
-			case NullPackage.CARD__PERSON:
+			case MainPackage.CARD__PERSON:
 				setPerson((String)newValue);
 				return;
-			case NullPackage.CARD__ROOM:
+			case MainPackage.CARD__ROOM:
 				setRoom((String)newValue);
 				return;
 		}
@@ -217,13 +222,13 @@ public class CardImpl extends MinimalEObjectImpl.Container implements Card {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case NullPackage.CARD__WEAPON:
+			case MainPackage.CARD__WEAPON:
 				setWeapon(WEAPON_EDEFAULT);
 				return;
-			case NullPackage.CARD__PERSON:
+			case MainPackage.CARD__PERSON:
 				setPerson(PERSON_EDEFAULT);
 				return;
-			case NullPackage.CARD__ROOM:
+			case MainPackage.CARD__ROOM:
 				setRoom(ROOM_EDEFAULT);
 				return;
 		}
@@ -238,11 +243,11 @@ public class CardImpl extends MinimalEObjectImpl.Container implements Card {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case NullPackage.CARD__WEAPON:
+			case MainPackage.CARD__WEAPON:
 				return WEAPON_EDEFAULT == null ? weapon != null : !WEAPON_EDEFAULT.equals(weapon);
-			case NullPackage.CARD__PERSON:
+			case MainPackage.CARD__PERSON:
 				return PERSON_EDEFAULT == null ? person != null : !PERSON_EDEFAULT.equals(person);
-			case NullPackage.CARD__ROOM:
+			case MainPackage.CARD__ROOM:
 				return ROOM_EDEFAULT == null ? room != null : !ROOM_EDEFAULT.equals(room);
 		}
 		return super.eIsSet(featureID);
@@ -257,7 +262,7 @@ public class CardImpl extends MinimalEObjectImpl.Container implements Card {
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (weapon: ");
 		result.append(weapon);
 		result.append(", person: ");

@@ -18,7 +18,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link Clueless.Solution#getSolutionCardList <em>Solution Card List</em>}</li>
  * </ul>
  *
- * @see Clueless.NullPackage#getSolution()
+ * @see Clueless.MainPackage#getSolution()
  * @model
  * @generated
  */
@@ -33,7 +33,7 @@ public interface Solution extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Solution Card List</em>' reference list.
-	 * @see Clueless.NullPackage#getSolution_SolutionCardList()
+	 * @see Clueless.MainPackage#getSolution_SolutionCardList()
 	 * @model upper="3"
 	 * @generated
 	 */

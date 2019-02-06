@@ -10,7 +10,7 @@
       <!-- @generated clueless -->
       <package
             uri="http://www.palce.clueless.edu"
-            class="Clueless.NullPackage"
+            class="Clueless.MainPackage"
             genModel="model/clueless.genmodel"/>
    </extension>
 

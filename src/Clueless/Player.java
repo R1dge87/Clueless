@@ -22,7 +22,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link Clueless.Player#getCardList <em>Card List</em>}</li>
  * </ul>
  *
- * @see Clueless.NullPackage#getPlayer()
+ * @see Clueless.MainPackage#getPlayer()
  * @model
  * @generated
  */
@@ -37,7 +37,7 @@ public interface Player extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
-	 * @see Clueless.NullPackage#getPlayer_Name()
+	 * @see Clueless.MainPackage#getPlayer_Name()
 	 * @model
 	 * @generated
 	 */
@@ -63,7 +63,7 @@ public interface Player extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Color</em>' attribute.
 	 * @see #setColor(String)
-	 * @see Clueless.NullPackage#getPlayer_Color()
+	 * @see Clueless.MainPackage#getPlayer_Color()
 	 * @model
 	 * @generated
 	 */
@@ -89,7 +89,7 @@ public interface Player extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Turn Token</em>' attribute.
 	 * @see #setTurnToken(Boolean)
-	 * @see Clueless.NullPackage#getPlayer_TurnToken()
+	 * @see Clueless.MainPackage#getPlayer_TurnToken()
 	 * @model
 	 * @generated
 	 */
@@ -115,7 +115,7 @@ public interface Player extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Person Id</em>' attribute.
 	 * @see #setPersonId(String)
-	 * @see Clueless.NullPackage#getPlayer_PersonId()
+	 * @see Clueless.MainPackage#getPlayer_PersonId()
 	 * @model
 	 * @generated
 	 */
@@ -141,7 +141,7 @@ public interface Player extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Card List</em>' reference list.
-	 * @see Clueless.NullPackage#getPlayer_CardList()
+	 * @see Clueless.MainPackage#getPlayer_CardList()
 	 * @model
 	 * @generated
 	 */
