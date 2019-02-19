@@ -20,6 +20,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link Clueless.Player#getTurnToken <em>Turn Token</em>}</li>
  *   <li>{@link Clueless.Player#getPersonId <em>Person Id</em>}</li>
  *   <li>{@link Clueless.Player#getCardList <em>Card List</em>}</li>
+ *   <li>{@link Clueless.Player#getCurrentPos <em>Current Pos</em>}</li>
  * </ul>
  *
  * @see Clueless.MainPackage#getPlayer()
@@ -146,6 +147,32 @@ public interface Player extends EObject {
 	 * @generated
 	 */
 	EList<Card> getCardList();
+
+	/**
+	 * Returns the value of the '<em><b>Current Pos</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Current Pos</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Current Pos</em>' attribute.
+	 * @see #setCurrentPos(String)
+	 * @see Clueless.MainPackage#getPlayer_CurrentPos()
+	 * @model
+	 * @generated
+	 */
+	String getCurrentPos();
+
+	/**
+	 * Sets the value of the '{@link Clueless.Player#getCurrentPos <em>Current Pos</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Current Pos</em>' attribute.
+	 * @see #getCurrentPos()
+	 * @generated
+	 */
+	void setCurrentPos(String value);
 
 	/**
 	 * <!-- begin-user-doc -->

@@ -213,7 +213,7 @@ public class HallwayImpl extends MinimalEObjectImpl.Container implements Hallway
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuilder result = new StringBuilder(super.toString());
+		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (hasPerson: ");
 		result.append(hasPerson);
 		result.append(')');

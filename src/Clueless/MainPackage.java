@@ -113,13 +113,22 @@ public interface MainPackage extends EPackage {
 	int PLAYER__CARD_LIST = 4;
 
 	/**
+	 * The feature id for the '<em><b>Current Pos</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PLAYER__CURRENT_POS = 5;
+
+	/**
 	 * The number of structural features of the '<em>Player</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PLAYER_FEATURE_COUNT = 5;
+	int PLAYER_FEATURE_COUNT = 6;
 
 	/**
 	 * The operation id for the '<em>Move</em>' operation.
@@ -435,6 +444,17 @@ public interface MainPackage extends EPackage {
 	EReference getPlayer_CardList();
 
 	/**
+	 * Returns the meta object for the attribute '{@link Clueless.Player#getCurrentPos <em>Current Pos</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Current Pos</em>'.
+	 * @see Clueless.Player#getCurrentPos()
+	 * @see #getPlayer()
+	 * @generated
+	 */
+	EAttribute getPlayer_CurrentPos();
+
+	/**
 	 * Returns the meta object for the '{@link Clueless.Player#move() <em>Move</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -697,6 +717,14 @@ public interface MainPackage extends EPackage {
 		 * @generated
 		 */
 		EReference PLAYER__CARD_LIST = eINSTANCE.getPlayer_CardList();
+
+		/**
+		 * The meta object literal for the '<em><b>Current Pos</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PLAYER__CURRENT_POS = eINSTANCE.getPlayer_CurrentPos();
 
 		/**
 		 * The meta object literal for the '<em><b>Move</b></em>' operation.
