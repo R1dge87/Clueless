@@ -72,5 +72,6 @@ public interface Hallway extends EObject {
 	 * @generated
 	 */
 	EList<Room> getAdjacentRoomList();
+	
 
 } // Hallway

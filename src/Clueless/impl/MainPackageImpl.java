@@ -88,7 +88,7 @@ public class MainPackageImpl extends EPackageImpl implements MainPackage {
 
 	/**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
-	 *
+	 * 
 	 * <p>This method is used to initialize {@link MainPackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
@@ -102,8 +102,7 @@ public class MainPackageImpl extends EPackageImpl implements MainPackage {
 		if (isInited) return (MainPackage)EPackage.Registry.INSTANCE.getEPackage(MainPackage.eNS_URI);
 
 		// Obtain or create and register package
-		Object registeredMainPackage = EPackage.Registry.INSTANCE.get(eNS_URI);
-		MainPackageImpl theMainPackage = registeredMainPackage instanceof MainPackageImpl ? (MainPackageImpl)registeredMainPackage : new MainPackageImpl();
+		MainPackageImpl theMainPackage = (MainPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof MainPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new MainPackageImpl());
 
 		isInited = true;
 
@@ -116,6 +115,7 @@ public class MainPackageImpl extends EPackageImpl implements MainPackage {
 		// Mark meta-data to indicate it can't be changed
 		theMainPackage.freeze();
 
+  
 		// Update the registry and return the package
 		EPackage.Registry.INSTANCE.put(MainPackage.eNS_URI, theMainPackage);
 		return theMainPackage;
@@ -179,6 +179,15 @@ public class MainPackageImpl extends EPackageImpl implements MainPackage {
 	@Override
 	public EReference getPlayer_CardList() {
 		return (EReference)playerEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getPlayer_CurrentPos() {
+		return (EAttribute)playerEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -396,6 +405,7 @@ public class MainPackageImpl extends EPackageImpl implements MainPackage {
 		createEAttribute(playerEClass, PLAYER__TURN_TOKEN);
 		createEAttribute(playerEClass, PLAYER__PERSON_ID);
 		createEReference(playerEClass, PLAYER__CARD_LIST);
+		createEAttribute(playerEClass, PLAYER__CURRENT_POS);
 		createEOperation(playerEClass, PLAYER___MOVE);
 		createEOperation(playerEClass, PLAYER___ACCUSE);
 		createEOperation(playerEClass, PLAYER___SUGGEST);
@@ -456,6 +466,7 @@ public class MainPackageImpl extends EPackageImpl implements MainPackage {
 		initEAttribute(getPlayer_TurnToken(), ecorePackage.getEBooleanObject(), "turnToken", null, 0, 1, Player.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getPlayer_PersonId(), ecorePackage.getEString(), "personId", null, 0, 1, Player.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getPlayer_CardList(), this.getCard(), null, "cardList", null, 0, -1, Player.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getPlayer_CurrentPos(), ecorePackage.getEString(), "currentPos", null, 0, 1, Player.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEOperation(getPlayer__Move(), null, "move", 0, 1, IS_UNIQUE, IS_ORDERED);
 

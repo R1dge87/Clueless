@@ -34,6 +34,7 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  *   <li>{@link Clueless.impl.PlayerImpl#getTurnToken <em>Turn Token</em>}</li>
  *   <li>{@link Clueless.impl.PlayerImpl#getPersonId <em>Person Id</em>}</li>
  *   <li>{@link Clueless.impl.PlayerImpl#getCardList <em>Card List</em>}</li>
+ *   <li>{@link Clueless.impl.PlayerImpl#getCurrentPos <em>Current Pos</em>}</li>
  * </ul>
  *
  * @generated
@@ -128,6 +129,26 @@ public class PlayerImpl extends MinimalEObjectImpl.Container implements Player {
 	 * @ordered
 	 */
 	protected EList<Card> cardList;
+
+	/**
+	 * The default value of the '{@link #getCurrentPos() <em>Current Pos</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCurrentPos()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String CURRENT_POS_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getCurrentPos() <em>Current Pos</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCurrentPos()
+	 * @generated
+	 * @ordered
+	 */
+	protected String currentPos = CURRENT_POS_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -258,6 +279,27 @@ public class PlayerImpl extends MinimalEObjectImpl.Container implements Player {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getCurrentPos() {
+		return currentPos;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setCurrentPos(String newCurrentPos) {
+		String oldCurrentPos = currentPos;
+		currentPos = newCurrentPos;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, MainPackage.PLAYER__CURRENT_POS, oldCurrentPos, currentPos));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public void move() {
 		// TODO: implement this method
@@ -307,6 +349,8 @@ public class PlayerImpl extends MinimalEObjectImpl.Container implements Player {
 				return getPersonId();
 			case MainPackage.PLAYER__CARD_LIST:
 				return getCardList();
+			case MainPackage.PLAYER__CURRENT_POS:
+				return getCurrentPos();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -336,6 +380,9 @@ public class PlayerImpl extends MinimalEObjectImpl.Container implements Player {
 				getCardList().clear();
 				getCardList().addAll((Collection<? extends Card>)newValue);
 				return;
+			case MainPackage.PLAYER__CURRENT_POS:
+				setCurrentPos((String)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -363,6 +410,9 @@ public class PlayerImpl extends MinimalEObjectImpl.Container implements Player {
 			case MainPackage.PLAYER__CARD_LIST:
 				getCardList().clear();
 				return;
+			case MainPackage.PLAYER__CURRENT_POS:
+				setCurrentPos(CURRENT_POS_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -385,6 +435,8 @@ public class PlayerImpl extends MinimalEObjectImpl.Container implements Player {
 				return PERSON_ID_EDEFAULT == null ? personId != null : !PERSON_ID_EDEFAULT.equals(personId);
 			case MainPackage.PLAYER__CARD_LIST:
 				return cardList != null && !cardList.isEmpty();
+			case MainPackage.PLAYER__CURRENT_POS:
+				return CURRENT_POS_EDEFAULT == null ? currentPos != null : !CURRENT_POS_EDEFAULT.equals(currentPos);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -419,7 +471,7 @@ public class PlayerImpl extends MinimalEObjectImpl.Container implements Player {
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuilder result = new StringBuilder(super.toString());
+		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (name: ");
 		result.append(name);
 		result.append(", color: ");
@@ -428,6 +480,8 @@ public class PlayerImpl extends MinimalEObjectImpl.Container implements Player {
 		result.append(turnToken);
 		result.append(", personId: ");
 		result.append(personId);
+		result.append(", currentPos: ");
+		result.append(currentPos);
 		result.append(')');
 		return result.toString();
 	}
