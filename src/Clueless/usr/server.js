@@ -2,6 +2,7 @@ var express  = require('express');
 var http     = require('http');
 var path     = require('path');
 var socketIO = require('socket.io');
+var fs       = require('fs');
 
 var app    = express();
 var server = http.Server(app);
@@ -27,3 +28,20 @@ io.on('connection', function(socket) {});
 setInterval(function() {
   io.sockets.emit('message', 'it works!');
 }, 1000);
+
+// Create a server object
+http.createServer(function (req, res) {
+  res.write("It Works!"); // response to client
+  res.end();
+}).listen(8080);
+
+fs.readFile('GameBoard.html', function (err, html) {
+  if (err) {
+    throw err;
+  }
+  http.createServer(function (request, response) {
+    response.writeHeader(200, {"Content-Type": "text/html"});
+    response.write(html);
+    response.end();
+  }).listen(8080);
+});
